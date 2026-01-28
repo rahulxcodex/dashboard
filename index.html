@@ -12,6 +12,7 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
         .dark-glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .nav-gradient { background: linear-gradient(to right, #1e40af, #3b82f6); }
         .card-hover:hover { transform: translateY(-4px); transition: all 0.3s ease; }
         
         /* Heatmap Grid Animations */
@@ -74,13 +75,21 @@
         </div>
 
         <div class="max-w-6xl w-full z-10 text-center">
-            <div class="mb-16">
+            <div class="mb-8">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-                    Smart Water <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Intelligence.</span>
+                    AquaSense <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Smart Intelligence.</span>
                 </h1>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto font-medium">
-                    Select your ecosystem to access real-time analytics, remote IoT controls, and integrated billing solutions.
-                </p>
+                
+                <!-- ABOUT COMPANY SECTION -->
+                <div class="max-w-3xl mx-auto mb-12 dark-glass p-8 rounded-[2rem] border border-white/5">
+                    <h2 class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-4">About Our Mission</h2>
+                    <p class="text-slate-300 text-lg font-medium leading-relaxed">
+                        AquaSense is a pioneering Smart Water Management solution born from the strategic partnership between <span class="text-white font-bold">AquaFlow Solutions</span> and <span class="text-white font-bold">EcomEase</span>. 
+                    </p>
+                    <p class="text-slate-400 mt-4 text-sm leading-relaxed">
+                        We integrate high-precision IoT monitoring with no-code e-commerce automation to help households, MSMEs, and government bodies reduce water wastage by up to <span class="text-blue-400 font-bold">50%</span>. Our platform transforms water from a managed utility into a strategic resource through real-time tracking, AI-driven failure prediction, and automated billing.
+                    </p>
+                </div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -421,7 +430,7 @@
                     }
                 });
 
-                // Clear previous interval if any (not strictly needed but good practice)
+                // Clear previous interval if any
                 if (window.twinInterval) clearInterval(window.twinInterval);
                 
                 window.twinInterval = setInterval(() => {
